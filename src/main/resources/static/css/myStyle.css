@@ -1,0 +1,63 @@
+@charset "ISO-8859-1";
+:root {
+	--background-color: #adad85;
+}
+
+.index-header, .listView, .newUser, .editUser{
+	max-width: 600px;
+	margin: auto;
+	text-align: center;
+}
+.link{
+	margin-top: 200px;
+}
+.listView-link  {
+	margin-top:70px;
+}
+
+.link a,.listView-link a {
+	text-decoration: none;
+	padding: 20px;
+	border: 1px solid black;
+	border-radius: 5px;
+	color: black;
+}
+a:hover, .newUser button:hover, .editUser button:hover {
+	background-color: var(--background-color);
+	color: white;
+}
+
+.listView-table table {
+	margin:auto;
+	margin-top:80px;
+	padding: 0.5em;
+}
+.listView-table table td {
+	padding:1em;	
+}
+.listView .listView-table a {
+	text-decoration: none;
+	padding: 5px;
+	border: 1px solid black;
+	border-radius: 5px;
+	color: black;	
+}
+
+.newUser table, .editUser table {
+	border : 1px solid black;
+	margin:auto;
+	padding:4rem;
+	margin-top: 80px;
+}
+.newUser table td, .editUser table td {
+	padding:1em;
+}
+.newUser button, .editUser button{
+	text-decoration: none;
+	padding: 20px;
+	border: 1px solid black;
+	border-radius: 5px;
+	color: black;
+	background-color:transparent;
+}
+

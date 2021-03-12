@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>listView</title>
+<link rel="StyleSheet" href="css/myStyle.css">
+
+</head>
+<body>
+	<div class="listView">
+		<h1>Users List</h1>
+		<hr>
+		<div class="listView-link">
+			<a href="/newUser">Add New User.</a>
+		</div>
+		<div class = "listView-table">
+			<table border="1" cellpadding="10">
+				<thead>
+					<tr>
+						<th>User ID</th>
+						<th>userName</th>
+						<th>Email</th>
+						<th>Action</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="user : ${users}">
+						<td th:text="${user.id}">User ID</td>
+						<td th:text="${user.username}">userName</td>
+						<td th:text="${user.email}">email</td>
+						<td><a class="listViewLink" th:href="@{'/edit/' + ${user.id}}">Edit</a>
+							&nbsp;&nbsp;&nbsp; <a class="listViewLink" th:href="@{'/delete/' + ${user.id}}">Delete</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js/myJs.js"></script>
+
+</body>
+</html>
