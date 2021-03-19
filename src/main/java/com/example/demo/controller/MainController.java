@@ -50,8 +50,8 @@ public class MainController {
 	@RequestMapping("/edit/{id}")
 	public ModelAndView showEditProductPage(@PathVariable(name = "id") int id) {
 	    ModelAndView mav = new ModelAndView("editUser");
-	    Users product = service.get(id);
-	    mav.addObject("user", product);
+	    Users user= service.get(id);
+	    mav.addObject("user", user);
 	     
 	    return mav;
 	}
