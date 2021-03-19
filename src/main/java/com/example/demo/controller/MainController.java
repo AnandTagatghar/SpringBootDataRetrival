@@ -35,8 +35,8 @@ public class MainController {
 	
 	@RequestMapping("/newUser")
 	public String newUser(Model model) {
-		Users product = new Users();
-	    model.addAttribute("user", product);
+		Users user = new Users();
+	    model.addAttribute("user", user);
 		return "newUser";
 	}
 	
